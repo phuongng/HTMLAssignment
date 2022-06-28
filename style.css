@@ -128,9 +128,19 @@ hr {
   .button {
     font-size: 1rem;
   }
+
+  footer {
+    padding-top: 10rem;
+  }
 }
 
 @media (max-width: 850px) {
+  section {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 750px) {
   section {
     height: 90vh;
   }
