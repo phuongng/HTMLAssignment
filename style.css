@@ -135,18 +135,6 @@ hr {
   }
 }
 
-@media (max-width: 850px) {
-  section {
-    height: 90vh;
-  }
-}
-
-@media (max-width: 750px) {
-  section {
-    height: 90vh;
-  }
-}
-
 @media (max-width: 650px) {
   body {
     padding: 0 1rem;
@@ -205,6 +193,11 @@ hr {
   .form {
     padding: 0 0.5rem;
   }
+  .formName {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
 
   .topSection p,
   li {
@@ -221,7 +214,6 @@ hr {
   }
 
   footer {
-    padding-bottom: 1rem;
     font-size: 0.5rem;
   }
   .inputText,
