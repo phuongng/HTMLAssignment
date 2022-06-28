@@ -121,12 +121,18 @@ hr {
   }
 
   section {
-    height: 80vh;
+    height: 85vh;
   }
 
   .inputText,
   .button {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  section {
+    height: 90vh;
   }
 }
 
