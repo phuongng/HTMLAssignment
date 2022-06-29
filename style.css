@@ -1,12 +1,14 @@
-body {
-  padding: 0 3rem;
-  height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  box-sizing: border-box;
 }
 
-section {
-  height: 120vh;
+body {
+  padding: 0 3rem;
+  height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
+
 .antraLogo {
   width: 12rem;
   position: relative;
@@ -23,6 +25,9 @@ h1 {
   margin-bottom: 0;
 }
 
+ul {
+  margin: 5px 0;
+}
 .signUp {
   font-size: 2.5rem;
   text-align: center;
@@ -33,20 +38,23 @@ h1 {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
+  box-sizing: border-box;
 }
 
 .formName {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3rem;
+  align-items: center;
 }
 
 .inputText {
   font-size: 1.1rem;
   height: 2.5rem;
+  padding: 0 12px;
   width: 100%;
-
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 input {
@@ -60,12 +68,23 @@ input:focus {
   box-shadow: 0 0 5px rgba(68, 151, 220, 0.8);
 }
 
-.inputText::placeholder {
-  padding: 0rem 12px;
-}
-.agreeSection {
+.agreementSection {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
+}
+
+.agreementSection .agree {
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+.agreementTitle {
+  display: flex;
+  align-items: center;
+}
+.agreementDetails {
+  font-size: 0.9rem;
+  /* font-weight: 300; */
 }
 
 .btnRegister {
@@ -91,7 +110,7 @@ input:focus {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #4497dc;
 }
 
 footer {
@@ -100,12 +119,16 @@ footer {
   bottom: 0;
   font-size: 0.8rem;
   padding-bottom: 3rem;
-  padding-top: 10rem;
+  padding-top: 15rem;
+}
+
+footer a {
+  color: black;
 }
 
 hr {
   position: relative;
-  margin: 1rem 2rem 0.5rem;
+  margin: 1rem 2rem;
 }
 
 .antraFooter {
@@ -120,18 +143,15 @@ hr {
   .form {
     padding: 0 5rem;
   }
-
-  section {
-    height: 85vh;
-  }
-
   .inputText,
   .button {
     font-size: 1rem;
   }
+}
 
+@media (max-width: 920px) {
   footer {
-    padding-top: 10rem;
+    padding-top: 20rem;
   }
 }
 
@@ -143,35 +163,40 @@ hr {
     padding: 0 1rem;
   }
 
-  section {
-    height: 90vh;
-  }
-
   .topSection p,
   li {
     font-size: 0.8rem;
   }
 
-  .instruction {
+  .agreementSection {
+    grid-template-columns: 1.5fr 4fr;
+  }
+  .instruction,
+  .agreementSection,
+  .inputText {
     font-size: 0.8rem;
   }
 
+  .agreementDetails,
+  .btnRegister {
+    font-size: 0.7rem;
+  }
   .signUp {
     font-size: 2rem;
   }
 
-  .agreeSection,
-  .btnRegister {
-    font-size: 0.8rem;
+  .formName {
+    grid-gap: 2rem;
   }
 
   footer {
+    padding-top: 10rem;
     padding-bottom: 1rem;
     font-size: 0.6rem;
   }
-  .inputText,
+
   .button {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -187,9 +212,6 @@ hr {
     font-size: 95%;
   }
 
-  section {
-    height: 80vh;
-  }
   .form {
     padding: 0 0.5rem;
   }
@@ -204,18 +226,22 @@ hr {
     font-size: 0.7rem;
   }
 
-  .instruction {
-    font-size: 0.7rem;
+  .instruction,
+  .agreementSection,
+  .inputText {
+    font-size: 0.65rem;
   }
 
-  .agreeSection,
+  .agreementDetails,
   .btnRegister {
-    font-size: 0.7rem;
+    font-size: 0.55rem;
   }
 
   footer {
     font-size: 0.5rem;
+    padding-top: 7rem;
   }
+
   .inputText,
   .button {
     font-size: 0.7rem;
