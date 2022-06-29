@@ -204,7 +204,7 @@ hr {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .antraLogo {
     width: 8rem;
     position: relative;
